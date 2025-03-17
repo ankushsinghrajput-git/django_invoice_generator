@@ -206,8 +206,9 @@ def main(details: str, items: list, address: list):
         10,
     )
 
-    output_dir = os.path.join(os.path.dirname(__file__), "static", "invoices")
-    os.makedirs(output_dir, exist_ok=True)
+    # output_dir = os.path.join(os.path.dirname(__file__), "static", "invoices")
+    # os.makedirs(output_dir, exist_ok=True)
+    output_dir = "/tmp"
 
     # Save PDF to the correct directory
     file_name = f"{customer_detail}_{date.today()}_bill.pdf"

@@ -41,9 +41,10 @@ def generate_pdf(request):
             pdf_file_name = f"{customer_detail}_{date.today()}_bill.pdf"
             # print(f"before passing {line1}")
             pdf.main(customer_detail, items, address)
-            pdf_path = os.path.join(
-                os.path.dirname(__file__), "static", "invoices", pdf_file_name
-            )
+            # pdf_path = os.path.join(
+            #     os.path.dirname(__file__), "static", "invoices", pdf_file_name
+            # )
+            pdf_path = f"/tmp/{pdf_file_name}"
             if not os.path.exists(pdf_path):
                 return render(
                     request,
